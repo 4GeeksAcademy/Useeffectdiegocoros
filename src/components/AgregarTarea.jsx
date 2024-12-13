@@ -5,8 +5,9 @@ export const AgregarTarea = ({ onAgregar }) => {
 
   const manejarAgregar = () => {
     if (nuevaTarea.trim() === "") return; // Evitar agregar tareas vacías
-    onAgregar(nuevaTarea); // Llamar a la función
-    setNuevaTarea(""); // Limpia  input
+    onAgregar(nuevaTarea); // Llamar a la función para agregar tarea
+    setNuevaTarea(""); // Limpia el input
+    window.location.reload(); // Refresca la página
   };
 
   return (
